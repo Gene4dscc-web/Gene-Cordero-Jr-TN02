@@ -1,1 +1,45 @@
+#include <iostream>
+#include <iomanip>
 
+using namespace std; 
+int main()
+{
+   
+    double Meal_Price;
+    int Quantity;
+    double service_charge;
+    int number_of_students;
+    
+    double subtotal;
+    double finalbill;
+    double servicecharge;
+    double Share;
+    
+    cout << "Price: ";
+    cin >> Meal_Price;
+    
+    cout << "Quantity: ";
+    cin >> Quantity;
+    
+    cout << "Service Charge: ";
+    cin >> service_charge;
+    
+    cout << "Amount of Students Sharing: ";
+    cin >> number_of_students;
+    
+    subtotal = Quantity * Meal_Price;
+    
+    servicecharge = subtotal * (service_charge/100);
+    
+    finalbill = servicecharge + subtotal;
+    
+    Share = finalbill/number_of_students;
+    
+    cout << fixed<< setprecision(2);
+    cout << "Subtotal: "<< subtotal<<"\n";
+    cout << "Service Charge: "<< servicecharge<<"\n";
+    cout << "Final Bill:"<< finalbill<<"\n";
+    cout << "Share per student:"<< Share<<"\n";
+    
+
+    return 0;
